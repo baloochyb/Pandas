@@ -1,5 +1,18 @@
 import numpy as np
 import pandas as pd
 
-dates = pd.date_range("20130101", periods=6)
-df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list("ABCD")) # Data Frame
+# df = pd.DataFrame(np.random.randn(10, 4))
+# print(df)
+# print(df[:3])
+# print(df[3:7])
+# print(df[7:])
+# pieces = [df[:3], df[3:7], df[7:]]
+# print(pieces)
+# print(pd.concat(pieces))
+
+# left = pd.DataFrame({"key": ["foo", "foo"], "lval": [1, 2]})
+# right = pd.DataFrame({"key": ["foo", "foo"], "rval": [4, 5]})
+# print(pd.merge(left, right, on="key"))
+left = pd.DataFrame({"key": ["foo", "bar"], "lval": [1, 2]})
+right = pd.DataFrame({"key": ["foo", "bar"], "rval": [4, 5]})
+print(pd.merge(left, right, on="key"))
